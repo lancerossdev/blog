@@ -1,0 +1,29 @@
+[
+  {
+    "title": "lanceross.xyz",
+    "description": "My blazingly fast website made with Astro.",
+    "githubUrl": "https://github.com/lancerossdev/lanceross.xyz",
+    "technologies": [
+      "Astro",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "astro-basic-blog",
+    "description": "A fully-responsive basic blog theme made with Astro.",
+    "githubUrl": "https://github.com/lancerossdev/astro-basic-blog",
+    "technologies": [
+      "Astro",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "no-fuss-astro",
+    "description": "An Astro Template without complicated design and setup.",
+    "githubUrl": "https://github.com/lancerossdev/no-fuss-astro",
+    "technologies": [
+      "Astro",
+      "TypeScript"
+    ]
+  }
+]
