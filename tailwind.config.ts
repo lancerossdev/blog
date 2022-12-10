@@ -13,7 +13,7 @@ module.exports = {
             "code::after": {
               content: '""',
             },
-            "p, li": {
+            "p, li, h1": {
               code: {
                 backgroundColor: "#1d202b",
                 padding: "0.250rem 0.4rem",
@@ -25,7 +25,7 @@ module.exports = {
                 transitionDuration: "150ms",
               },
             },
-            "html:not(.dark) p, li": {
+            "html:not(.dark) p, li, h1": {
               code: {
                 backgroundColor: "#e4e4e7",
                 padding: "0.250rem 0.4rem",
@@ -51,11 +51,15 @@ module.exports = {
       },
       colors: {
         nord: {
-          900: "#101218",
-          800: "#161923",
-          700: "#1d202b",
-          600: "#252937",
-          500: "#3d445c",
+          900: "#8FBCBB",
+          800: "#88C0D0",
+          700: "#81A1C1",
+          600: "#5E81AC",
+          500: "#BF616A",
+          400: "#D08770",
+          300: "#EBCB8B",
+          200: "#A3BE8C",
+          100: "#B48EAD",
         },
       },
     },

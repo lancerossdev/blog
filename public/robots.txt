@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lanceross.xyz/sitemap-index.xml
+Sitemap: https://blog.lanceross.xyz/sitemap-index.xml
