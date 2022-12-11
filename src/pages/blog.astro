@@ -1,7 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
-import { Icon } from "astro-icon";
 
 interface Frontmatter {
   title: string;
@@ -20,10 +19,10 @@ const metadata = {
 
 <Layout {...metadata}>
   <section>
-    <h1 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">
-      All Blog Posts
-    </h1>
-    <p class="dark:text-zinc-300 mb-6">This is where I write about my experiences as a web developer, and share my thoughts in web development field.</p>
+    <h1 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">Blog Posts</h1>
+    <p class="dark:text-zinc-300 mb-6">
+      This is where I write about my experiences as a student web developer, and share some basic tutorials in web development. Currently, I have published {blogs.length} blog posts.
+    </p>
   </section>
   <section>
     <ul>

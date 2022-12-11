@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import NoScript from "@components/NoScript.astro";
 import "@fontsource/inter";
 
 export interface Props {
@@ -100,5 +101,6 @@ const classBody =
       <slot />
     </main>
     <Footer />
+    <NoScript />
   </body>
 </html>

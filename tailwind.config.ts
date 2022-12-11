@@ -17,7 +17,7 @@ module.exports = {
             },
             "p, li, h1": {
               code: {
-                backgroundColor: "#1d202b",
+                backgroundColor: "#27272a",
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "300",

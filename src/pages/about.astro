@@ -1,7 +1,5 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import BlogCard from "@components/BlogCard.astro";
-import { Icon } from "astro-icon";
 
 const metadata = {
   title: "Blog - Lance Ross",
@@ -13,15 +11,29 @@ const metadata = {
   <section class="pb-14">
     <div>
       <h1 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">About this blog</h1>
-      <p class="dark:text-zinc-300 mb-16">This is the microsite version of my blog. I decided to create a separate site for my blog because I want to try create more blog posts and I want to have a separate repository for managing my blog.</p>
-    </div>
-    <div>
-      <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Why need to separate it?</h1>
-      <p class="dark:text-zinc-300 mb-16">I see some people doing microsites to seperate their content like </p>
-    </div>
-    <div>
-      <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Bro, just use a CMS.</h1>
-      <p class="dark:text-zinc-300 mb-16">This is the microsite version of my blog. I decided to create a separate site for my blog because I want to try create more blog posts.</p>
+      <p class="dark:text-zinc-300 mb-16">
+        This is the microsite version of my blog. I decided to create a separate site for my blog because I want to try create more blog posts and I want to have a separate repository for
+        managing my blog.
+      </p>
+      <div>
+        <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Why need to separate it?</h1>
+        <p class="dark:text-zinc-300 mb-16">
+          I see some people doing microsites to seperate their blog site to their portfolio website. Doing microsites can also save time since instead of rebuilding the whole site, you just
+          build a blog page. This may cost a lot since you host it as different projects but there are many static site hosting nowadays for free like <a
+            href="https://vercel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2">Vercel</a
+          >.
+        </p>
+      </div>
+      <div>
+        <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Bro, just use a CMS.</h1>
+        <p class="dark:text-zinc-300 mb-16">
+          That's what I'm planning to do back then, but it feels complicated to setup so I just have to stick with manual editing. I use Notion to write the draft of my content and just create
+          an MDX file on my posts folder, commit and push it so I can publish it.
+        </p>
+      </div>
     </div>
   </section>
 </Layout>

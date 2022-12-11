@@ -20,22 +20,33 @@ const metadata = {
 
 <Layout {...metadata}>
   <section class="pb-14">
-    <h3 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">
-      Welcome to my Blog!
-    </h3>
-    <p class="dark:text-zinc-300 mb-6">This is the microsite version of Lance Ross' blog page. I decided to create a separate site for my blog because I want to try create more blog posts. This site is made with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2">Astro</a> and hosted in <a href="" target="_blank" rel="noopener noreferrer" class="">Vercel</a></p>
+    <h3 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">Welcome to my Blog!</h3>
+    <p class="dark:text-zinc-300 mb-6">
+      This is the microsite version of Lance Ross' blog page. I decided to create a separate site for my blog because I want to try create more blog posts. This site is proudly made with <a
+        href="https://astro.build"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2">Astro</a
+      > and hosted in <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2"
+        >Vercel</a
+      >.
+    </p>
   </section>
   <section>
-    <h3 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">
-      Recent Posts
-    </h3>
+    <h3 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">Recent Posts</h3>
     <p class="dark:text-zinc-300 mb-6">This is where I write about my experiences as a web developer, and share my thoughts in web development field.</p>
   </section>
-  <section class="flex justify-center flex-col items-center">
+  <section class="flex justify-center flex-col">
     <ul>
-      { blogs.length > 1 && blogs.slice(0, 2).map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)}
+      {
+        blogs.length > 1 &&
+          blogs.slice(0, 2).map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)
+      }
     </ul>
-    <a href="/blog" class="dark:bg-zinc-800 bg-zinc-200 transition-all rounded-xl p-3 text-black dark:text-white m-2 ring-2 ring-opacity-0 ring-zinc-700 hover:ring-opacity-100">Show all posts</a>
-
+    <a
+      href="/blog"
+      class="dark:bg-zinc-800 bg-zinc-200 transition-all rounded-xl p-2 text-black dark:text-white m-2 ring-2 ring-opacity-0 ring-zinc-700 hover:ring-opacity-100 flex flex-col items-center"
+      >Show all posts</a
+    >
   </section>
 </Layout>

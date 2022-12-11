@@ -20,7 +20,7 @@ const bodyClass =
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -49,10 +49,10 @@ const bodyClass =
     <meta name="author" content="Lance Ross" />
     <script async defer data-website-id="2c6f3c52-eb1f-4895-bbdf-504224851d11" src="https://umami.lanceross.xyz/umami.js"></script>
     <script is:inline>
+      // credits to satnaing on github
       const primaryColorScheme = "none";
       const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const currentTheme = localStorage.getItem("theme");
-
       let theme;
       if (currentTheme) {
         theme = currentTheme === "dark" ? "dark" : "";
@@ -65,19 +65,26 @@ const bodyClass =
           theme = darkModeMediaQuery ? "dark" : "";
         }
       }
-      document.querySelector("html").className = theme;
+      document.documentElement.className = theme;
     </script>
     <script>
       const themeBtn = document.querySelector(".theme-toggle");
-      const htmlClassList = document.querySelector("html")?.classList;
-      themeBtn?.addEventListener("click", function () {
-        if (htmlClassList?.contains("dark")) {
+      const htmlClassList = document.documentElement.classList;
+      themeBtn.addEventListener("click", function () {
+        if (htmlClassList.contains("dark")) {
           localStorage.setItem("theme", "light");
-          htmlClassList?.remove("dark");
+          htmlClassList.remove("dark");
         } else {
           localStorage.setItem("theme", "dark");
-          htmlClassList?.add("dark");
+          htmlClassList.add("dark");
         }
+      });
+    </script>
+    <script>
+      const navBtn = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
       });
     </script>
   </head>
@@ -99,8 +106,10 @@ const bodyClass =
           <slot />
         </article>
       </section>
-      <footer class="flex flex-row justify-between items-center mt-10">
+      <footer class="flex flex-row justify-between items-center mt-10 text-base dark:text-zinc-400">
         <a href="/blog" class="hover:underline prose-a:underline-offset-2 dark:text-blue-400 text-blue-700">Back to posts</a>
+        <a href="#" class="hover:underline prose-a:underline-offset-2 dark:text-blue-400 text-blue-700">Back to top</a>
+
       </footer>
     </main>
   </body>
