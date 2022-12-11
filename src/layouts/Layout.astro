@@ -1,5 +1,6 @@
 ---
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 import "@fontsource/inter";
 
 export interface Props {
@@ -17,10 +18,10 @@ const defaultMeta = {
 };
 
 const { title = defaultMeta.title, description = defaultMeta.description, heroImage = defaultMeta.image, imageAlt = defaultMeta.imageAlt } = Astro.props as Props;
-const canonicalURL = new URL(Astro.url).href
+const canonicalURL = new URL(Astro.url).href;
 
-const classBody = "transition motion-reduce:transition-none scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-nord-500 dark:scrollbar-track-nord-700 dark:bg-nord-900 dark:text-white font-inter selection:bg-blue-500/70 text-xl";
-
+const classBody =
+  "transition scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-500 dark:scrollbar-track-zinc-700 dark:bg-zinc-900 dark:text-white font-sans selection:bg-blue-500/70 text-lg";
 ---
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ const classBody = "transition motion-reduce:transition-none scrollbar-thin scrol
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <link rel="sitemap" href="/sitemap-index.xml">
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="title" content={title} />
     <meta name="description" content={description} />
@@ -85,11 +86,19 @@ const classBody = "transition motion-reduce:transition-none scrollbar-thin scrol
         }
       });
     </script>
+    <script>
+      const navBtn = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+      });
+    </script>
   </head>
   <body class={classBody}>
     <Header />
     <main class="m-auto p-6 max-w-4xl md:p-8">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

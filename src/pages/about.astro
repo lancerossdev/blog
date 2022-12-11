@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import { Icon } from "astro-icon";
+
+const metadata = {
+  title: "Blog - Lance Ross",
+  description: "This is my blog section, this is where I write about my experiences and share my thoughts.",
+};
+---
+
+<Layout {...metadata}>
+  <section class="pb-14">
+    <div>
+      <h1 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">About this blog</h1>
+      <p class="dark:text-zinc-300 mb-16">This is the microsite version of my blog. I decided to create a separate site for my blog because I want to try create more blog posts and I want to have a separate repository for managing my blog.</p>
+    </div>
+    <div>
+      <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Why need to separate it?</h1>
+      <p class="dark:text-zinc-300 mb-16">I see some people doing microsites to seperate their content like </p>
+    </div>
+    <div>
+      <h1 class="mb-6 dark:text-white text-2xl md:text-3xl tracking-tight font-bold">Bro, just use a CMS.</h1>
+      <p class="dark:text-zinc-300 mb-16">This is the microsite version of my blog. I decided to create a separate site for my blog because I want to try create more blog posts.</p>
+    </div>
+  </section>
+</Layout>
