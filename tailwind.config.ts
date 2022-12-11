@@ -25,6 +25,7 @@ module.exports = {
                 transitionProperty: "color, background-color",
                 transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                 transitionDuration: "150ms",
+                border: "1px solid #3f3f46",
               },
             },
             "html:not(.dark) p, li, h1": {
@@ -37,6 +38,7 @@ module.exports = {
                 transitionProperty: "color, background-color",
                 transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                 transitionDuration: "150ms",
+                border: "1px solid #d4d4d8",
               },
             },
           },
@@ -44,22 +46,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
-      },
-      gridTemplateColumns: {
-        1: "repeat(auto-fit, minmax(24ch, 1fr));",
-      },
-      colors: {
-        nord: {
-          900: "#101218",
-          800: "#88C0D0",
-          700: "#81A1C1",
-          600: "#5E81AC",
-          500: "#BF616A",
-          400: "#D08770",
-          300: "#EBCB8B",
-          200: "#A3BE8C",
-          100: "#B48EAD",
-        },
       },
     },
   },

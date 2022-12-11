@@ -13,7 +13,7 @@ themeBtn.addEventListener("click", function () {
 
 // navbar toggle
 const navBtn = document.querySelector(".nav-toggle");
-      const navMenu = document.querySelector(".nav-menu");
-      navBtn.addEventListener("click", function () {
-        navMenu.classList.toggle("hidden");
-      });
+const navMenu = document.querySelector(".nav-menu");
+navBtn.addEventListener("click", function () {
+  navMenu.classList.toggle("hidden");
+});
