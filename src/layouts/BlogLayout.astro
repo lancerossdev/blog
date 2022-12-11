@@ -5,6 +5,7 @@ import "@fontsource/inter";
 let { pubDate } = Astro.props.content;
 const { frontmatter } = Astro.props;
 const canonicalURL = new URL(Astro.url).href;
+const title = frontmatter.title;
 
 const thisDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "medium",
@@ -12,8 +13,10 @@ const thisDate = new Date(pubDate).toLocaleDateString("en", {
 pubDate = pubDate.split("T")[0];
 
 const ogImageParams = new URLSearchParams({
-  title: JSON.stringify(frontmatter.title),
+  title,
 }).toString();
+
+const ogImageLink = "https://images.lanceross.xyz/"
 
 const bodyClass =
   "transition scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-500 dark:scrollbar-track-zinc-700 dark:bg-zinc-900 bg-white dark:text-white font-sans selection:bg-blue-500/70 sm:text-lg";
@@ -34,7 +37,7 @@ const bodyClass =
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
-    <meta property="og:image" content={`/og?${ogImageParams}`} />
+    <meta property="og:image" content={`${ogImageLink}api/lanceross?${ogImageParams}`} />
     <meta property="og:site_name" content="Lance Ross" />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -43,7 +46,7 @@ const bodyClass =
     <meta name="twitter:creator" content="@lancerossdev" />
     <meta property="twitter:title" content={frontmatter.title} />
     <meta property="twitter:description" content={frontmatter.description} />
-    <meta property="twitter:image" content={`/og?${ogImageParams}`} />
+    <meta property="twitter:image" content={`${ogImageLink}api/lanceross?${ogImageParams}`} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content="Lance Ross" />
