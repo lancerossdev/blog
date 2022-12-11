@@ -4,10 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
-
-const layoutOptions = {
-  blog: "/src/layouts/BlogLayout.astro",
-};
+import astroLayouts from "astro-layouts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,7 +27,17 @@ export default defineConfig({
     }),
     tailwind(),
     sitemap(),
-    mdx(),
+    mdx({
+      remarkPlugins: [
+        [
+          astroLayouts,
+          {
+            default: "@layouts/Layout.astro",
+            "pages/blog/**/*.mdx": "@layouts/BlogLayout.astro",
+          },
+        ],
+      ],
+    }),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),

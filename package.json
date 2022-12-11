@@ -22,6 +22,7 @@
     "astro": "^1.6.14",
     "astro-compress": "1.0.8",
     "astro-icon": "^0.7.3",
+    "astro-layouts": "^0.1.1",
     "prettier-plugin-astro": "^0.7.0",
     "sharp": "^0.31.2",
     "tailwind-scrollbar": "^2.0.1",

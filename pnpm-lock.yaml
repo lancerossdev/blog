@@ -11,6 +11,7 @@ specifiers:
   astro: ^1.6.14
   astro-compress: 1.0.8
   astro-icon: ^0.7.3
+  astro-layouts: ^0.1.1
   prettier-plugin-astro: ^0.7.0
   sharp: ^0.31.2
   tailwind-scrollbar: ^2.0.1
@@ -27,6 +28,7 @@ devDependencies:
   astro: 1.6.14
   astro-compress: 1.0.8
   astro-icon: 0.7.3
+  astro-layouts: 0.1.1_astro@1.6.14
   prettier-plugin-astro: 0.7.0
   sharp: 0.31.2
   tailwind-scrollbar: 2.0.1_tailwindcss@3.2.4
@@ -898,6 +900,15 @@ packages:
       node-fetch: 3.3.0
       resolve-pkg: 2.0.0
       svgo: 2.8.0
+    dev: true
+
+  /astro-layouts/0.1.1_astro@1.6.14:
+    resolution: {integrity: sha512-bzG0sOBtkGqyYe27CDGIbnFyqAwOEjWYEVTdfGeq3ya3mPtyArcJ9snUcqbjSIocjqgBvgEUNmJ0wYUTUc3fEg==}
+    peerDependencies:
+      astro: ^1.6.7
+    dependencies:
+      astro: 1.6.14
+      picomatch: 2.3.1
     dev: true
 
   /astro/1.6.14:
