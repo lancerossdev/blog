@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import NavLink from "@components/NavLink.astro"
 import Logo from "/favicon.svg";
 
 const navbar = [
@@ -25,9 +26,7 @@ const navbar = [
         <ul class="flex-row hidden sm:flex">
           {navbar.map((navbar) => (
             <li>
-              <a href={navbar.href} class="dark:text-zinc-300 dark:hover:bg-zinc-800 hover:bg-zinc-200 rounded-lg transition-colors inline-block px-3 py-2 text-zinc-700">
-                {navbar.name}
-              </a>
+              <NavLink href={navbar.href} name={navbar.name} />
             </li>
           ))}
         </ul>
