@@ -4,8 +4,8 @@ description: "For today, we will self-host our own Umami Analytics using Supabas
 pubDate: "November 29, 2022"
 ---
 import BlogImage from "@components/BlogImage.astro"
-import CreateProject from "@images/createproject.png"
-import VercelEnv from "@images/envariables.png"
+import supabase from "@images/supabase.png"
+import secrets from "@images/secrets.png"
 
 While planning for a new feature on my website, I decided to add an analytics tracker for my site using Umami Analytics. I've been using its beta version for a while now and I really like it. I wanted to try self-hosting it and I'm going to show you too how to do it with Supabase and Vercel.
 
@@ -25,7 +25,7 @@ Make sure you have a Supabase and Vercel Account. If you don't have one, you can
 ### Step 1: Create a Supabase Project
 Go to [Supabase](https://supabase.io) and create a new project. You can choose any plan that you want and a close region where you're going to host your project. Make sure to set a **strong password** for your database!
 
-<BlogImage src={CreateProject} alt="Create Project in Supabase" />
+<BlogImage src={supabase} alt="Create Project in Supabase" />
 
 Get the database connection string from the Settings > Database page, then scroll to the bottom for the Connection Pooling section and copy the Connection string. It should look something like this: 
 ```bash
@@ -52,7 +52,7 @@ Now, you can deploy Umami to Vercel.
 
 First, create a new project on Vercel and connect it to your GitHub account. Then, select the `umami` repository to proceed. Before deploying the app, go to the project settings first and add the environment variables.
 
-<BlogImage src={VercelEnv} alt="Vercel Environment Variables" />
+<BlogImage src={secrets} alt="Vercel Environment Variables" />
 
 Now your Umami Analytics is now deployed to Vercel! 🎉
 

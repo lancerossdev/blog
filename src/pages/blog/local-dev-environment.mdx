@@ -5,8 +5,8 @@ pubDate: "December 8, 2022"
 ---
 
 import BlogImage from "@components/BlogImage.astro";
-import ConfigWSL from "@images/configwsl.png";
-import ConfigVSCode from "@images/configvscode.png";
+import terminal from "@images/terminal.png";
+import vscode from "@images/vscode.png";
 
 It’s been many months since I started in my web development journey but still don’t have a great development environment. I just use whatever the default settings on my terminal and workspace.
 
@@ -117,11 +117,11 @@ Next, you need to install some VSCode extensions to make your life easier. To do
 
 Next, you need to configure VSCode and Terminal to make it work with your WSL. To do that, open VSCode and click the Terminal icon on the left sidebar. Then, click the "Select Default Shell" button and select "Ubuntu" from the dropdown.
 
-<BlogImage src={ConfigVSCode} alt="Configuring Default Terminal VSCode" />
+<BlogImage src={vscode} alt="Configuring Default Terminal VSCode" />
 
 For Windows Terminal, click the dropdown and go to settings. After that, go to "Startup" and change the default profile to "Ubuntu." and save the changes.
 
-<BlogImage src={ConfigWSL} alt="Settings for Windows Terminal" />
+<BlogImage src={terminal} alt="Settings for Windows Terminal" />
 
 And, there you go! You just setup a local dev environment using awesome tools from Microsoft like VSCode, Terminal, WSL and more! 🥳
 
