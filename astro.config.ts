@@ -21,7 +21,7 @@ export default defineConfig({
       css: true,
       html: true,
       js: true,
-      img: true,
+      img: false,
       svg: true,
       logger: 0,
     }),
