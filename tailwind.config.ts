@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     extend: {
       typography: {
@@ -15,10 +15,16 @@ module.exports = {
             "code::after": {
               content: '""',
             },
+            code: {
+              fontFamily: "JetBrains Mono, monospace",
+              span: {
+                fontFamily: "JetBrains Mono, monospace",
+              },
+            },
             "p, li, h1": {
               code: {
                 backgroundColor: "#27272a",
-                padding: "0.250rem 0.4rem",
+                padding: "0.200rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "300",
                 color: "white",
@@ -31,7 +37,7 @@ module.exports = {
             "html:not(.dark) p, li, h1": {
               code: {
                 backgroundColor: "#e4e4e7",
-                padding: "0.250rem 0.4rem",
+                padding: "0.200rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "300",
                 color: "black",
@@ -45,7 +51,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans]
+        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
