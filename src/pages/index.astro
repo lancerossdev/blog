@@ -1,7 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
-import { Icon } from "astro-icon";
 
 interface Frontmatter {
   title: string;
@@ -13,8 +12,8 @@ let blogs = await Astro.glob<Frontmatter>("./blog/*.mdx");
 blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 
 const metadata = {
-  title: "Lance Ross - Blog",
-  description: "This is the microsite version of Lance Ross' blog. This is going to be my new blog site and all of my old posts from my personal website will get redirect here.",
+  title: "Blog",
+  description: "This is the microsite version of my blog. This is going to be my new blog site and all of my old posts from my personal website will get redirect here.",
 };
 ---
 
@@ -22,14 +21,7 @@ const metadata = {
   <section class="pb-14">
     <h3 class="mb-6 dark:text-white text-3xl md:text-4xl tracking-tight font-bold">Lance Ross' Blog</h3>
     <p class="dark:text-zinc-300 mb-6">
-      This is the microsite version of Lance Ross' blog page. I decided to create a separate site for my blog because I want to try create more blog posts. This site is proudly made with <a
-        href="https://astro.build"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2">Astro</a
-      > and hosted in <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="dark:text-blue-400 text-blue-600 transition-colors hover:underline underline-offset-2"
-        >Vercel</a
-      >.
+      This is the microsite version of Lance Ross' blog page. This website is no longer maintained by the owner and has been discontinued. If you want to read my blogs, you will be redirected to my main website where I migrated my blog again.
     </p>
   </section>
   <section>
@@ -40,7 +32,7 @@ const metadata = {
     <ul>
       {
         blogs.length > 1 &&
-          blogs.slice(0, 2).map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)
+          blogs.slice(0, 2).map((post) => <BlogCard title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} url={post.url} />)
       }
     </ul>
     <a class="flex items-center dark:bg-zinc-800 bg-zinc-200 transition-all dark:text-white flex-col hover:ring-2 m-2 p-2 ring-zinc-300 dark:ring-zinc-700 rounded-xl text-black" href="/blog"

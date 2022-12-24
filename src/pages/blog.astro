@@ -5,15 +5,14 @@ import BlogCard from "@components/BlogCard.astro";
 interface Frontmatter {
   title: string;
   pubDate: string;
-  description: string;
 }
 
 let blogs = await Astro.glob<Frontmatter>("./blog/*.mdx");
 blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 
 const metadata = {
-  title: "Blog - Lance Ross",
-  description: "This is my blog section, this is where I you can find all of my blog posts including archives.",
+  title: "Blog",
+  description: "This is the microsite version of my blog.",
 };
 ---
 
@@ -26,7 +25,7 @@ const metadata = {
   </section>
   <section>
     <ul>
-      {blogs.map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)}
+      {blogs.map((post) => <BlogCard title={post.frontmatter.title} pubDate={post.frontmatter.pubDate} url={post.url} />)}
     </ul>
   </section>
 </Layout>
